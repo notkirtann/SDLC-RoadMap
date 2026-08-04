@@ -1,0 +1,15 @@
+{
+  "name": "1.docker-file",
+  "version": "1.0.0",
+  "description": "dockerfile learning",
+  "license": "ISC",
+  "author": "kirtan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
