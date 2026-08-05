@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Real Madrid Club de Futbol
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color:black ;
+                color: bisque;
+                font-family: sans-serif;
+                /* background-image: url('https://www.vecteezy.com/vector-art/1849553-modern-gold-background'); */
+            }
+            table,tr,td,tr,th,caption{
+                border: 1px solid white;
+                border-collapse: collapse;
+            }
+            tr:nth-child(even) {
+                background-color: orange !important;
+                color: black;
+            }
+            a{
+                color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#heading">heading</a>
+                    </li>
+                    <li>
+                        <a href="#ol-list">ol list</a>
+                    </li>
+                    <li>
+                        <a href="#unorder-list">ul list</a>
+                    </li>
+                    <li>
+                        <a href="#desc-li">description list</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <p>Hala Madird 
+                    y nada mas
+                    siuu
+                </p>
+                <pre>
+                    Hala 
+                    Madrid
+                    Y nada
+                    Mas
+                </pre>
+            </section>
+            <section id="heading">
+                <h1>Best Club in the world</h1>
+                <h2>15 Time UCL</h2>
+                <h3>36 time La liga</h3>
+                <h4>100+ collective trophy cabinet</h4>
+                <h5>Plays in La liga</h5>
+                <h6>Established in late 80s</h6>
+            </section>
+            <section id="unorder-list">
+                <ul style="list-style-type:lower-roman;">
+                    <li> &gt; & gt</li>
+                    <li>&lt; & lt</li>
+                    <li>&copy; & copy</li>
+                    <li>&nbsp; & nbsp</li>
+                    <li><abbr title="Mozila Firefox">MDN</abbr></li>
+                    <li title="HAKsdjan">NDJISDN</li>
+                </ul>
+            </section>
+            <section id="ol-list">
+                <ol style="list-style-type: upper-alpha;">
+                    <li>hello</li>
+                    <li>hola</li>
+                    <li>namste</li>
+                </ol>
+            </section>
+            <section id="desc-li">
+                <dl>
+                    <dt>muchas gracias</dt>
+                    <dd>means thankyou so much</dd>
+                    <dt>hola amigos</dt>
+                    <dd>means hello friend</dd>
+                </dl>
+            </section>
+            <section id="link">
+                <figure>
+                    <img src="" alt="hola" title="hover pr dikhta" height="200px" width="200px" loading="lazy">
+                    <figcaption>demo of fig tag</figcaption>
+                
+                    <code> function(){
+                    <br> &nbsp; &nbsp; console.log('Siuuu')
+                    <br> }
+                </code>
+                </figure>
+            </section>
+            <section>
+                <table>
+                    <caption>My Table</caption>
+                    <tr>
+                        <th>Hola</th>
+                        <th>Amigos</th>
+                        <th>kese ho</th>
+                    </tr>
+                    <tr>
+                        <td>Hi</td>
+                        <td>Friends</td>
+                        <td>Kaise hox</td>
+                    </tr>
+                </table>
+            </section>
+            <section aria-label="FORM">
+                <form action="https://httpbin.org/get" method="GET">
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        
+                        <p>
+                        <label for="firstName">Phela Naam:    </label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Kirtan" autocomplete="on" required>
+                        </p>
+                        <p>
+                        <label for="lasttName">Dusra Naam:    </label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Madrid" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <button type="submit">Submit</button>
+                            <input type="reset">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <a href="https://kirtan-nahar.vercel.app/" target="_blank">Visit Portfolio</a>
+                <!-- self top parent are other  -->
+            </section>
+            <section>
+                <iframe src="https://kirtan-nahar.vercel.app/" height="300" width="600" title="Iframe eg"></iframe>
+                <iframe src="https://i-own-jersey.vercel.app/" height="300" width="600" title="Iframe eg"></iframe>
+            </section>
+
+            <section>
+                <form action="">
+                    <label for="Email">Enter your email</label>
+                    <input type="email" name="email" id="email">
+                    <button type="submit">Submit your email</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

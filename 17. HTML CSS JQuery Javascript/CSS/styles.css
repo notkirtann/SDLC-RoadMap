@@ -1,0 +1,48 @@
+/* ? aur bhai k haal chaal */
+/* ! haa bhai cmnt */
+/* * color change */
+/* TODO: phir different */
+/* // done all code */
+
+body{
+    /* background-image:url(bernabeu.jpg),url(car.jpg) ; */
+    /* background-blend-mode:screen; */
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+}
+h1 span:hover{
+    color: #00ff00;
+}
+h1{
+    color:#f0f0f0;
+    background-image: url(car.jpg);
+    text-align: center;
+    background-repeat:repeat;
+    background-size:cover;
+    margin: 0;
+}
+h2{
+    text-align: center;
+    font-size:4vh;
+    color: #f0f0f0;
+    
+}
+#sec1{
+    background-image:url(bernabeu.jpg);
+    background-size: 100% auto;
+    background-attachment: fixed;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+}
+#sec2{
+    background-image:url(car.jpg);
+  background-size: 100% auto;
+    background-attachment: fixed;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+}

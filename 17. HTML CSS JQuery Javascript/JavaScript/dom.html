@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Add and Remove</title>
+</head>
+<body>
+    <ul class="langauge">
+        <li>JavaScript</li>
+        <li>HTML</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName)
+    {
+        let li = document.createElement('li');
+        li.innerHTML = langName;
+        document.querySelector('.langauge').
+        appendChild(li);
+    }
+    addLang("CSS")
+    addLang("Python")
+
+    function OptiLang(langName)
+    {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.langauge').appendChild(li)
+    }
+    OptiLang("Java")
+    addLang("Cpp")
+
+    const replaceNthChlid = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement('li')
+    newLi.textContent= "TypeScript";
+    replaceNthChlid.replaceWith(newLi)
+    
+</script>
+</html>

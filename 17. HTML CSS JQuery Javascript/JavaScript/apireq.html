@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: #212121;
+            color: #fff;
+            padding: 10px;
+            border-radius: 15%;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Hello world
+        <div class="photo">
+            <!-- <img src="pic_url" alt="Girl in a jacket"> -->
+        </div>
+    </div>
+</body>
+<script>
+    const URLrequest = 'https://api.github.com/users/notkirtann';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',URLrequest);
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            console.log(this.responseText)
+            const data = JSON.parse(this.responseText);
+            console.log(data.followers);
+            var pic_url = data.avatar_url;
+
+            const img = document.createElement('img');
+            img.src = pic_url;
+            img.alt = 'github';
+
+            const photoDiv = document.querySelector('.photo');
+            photoDiv.appendChild(img);
+        }
+        
+    }
+    xhr.send();
+</script>
+</html>

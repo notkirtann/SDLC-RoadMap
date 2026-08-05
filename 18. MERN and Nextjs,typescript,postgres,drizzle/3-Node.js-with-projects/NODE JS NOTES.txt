@@ -1,0 +1,221 @@
+COMPLETE NODE.JS DEVELOPER COURSE (3rd Edition) by Andrew Mead
++
+Node JS by Hitesh Chaudary 
+(BOTH TOGETHER)
+
+
+NODE JS NOTES
+
+its a javascript runtime
+
+Nodejs is a different version of javascript you could say, it is basically built on javascript, it adds
+
+some features to it, is not capable of doing some other things you can do with javascript in the browser,
+
+so it basically takes javascript and puts it into a different environment. 
+
+gives file system library in node js
+using require function with 'fs'
+
+
+OTHER CORE MODULES
+-https - launch SSL server encrypt
+-http - launch server send rqst
+-fs
+-path
+-os
+
+window object for browser and global for node environment.
+both use chromes v8 engine for compiling and executing code to machine language.
+
+DOM not in node but is there in browser
+process is there in node but not in bowser
+ 
+node uses non blocking I/O
+
+Section 1,2,3
+-node module system
+	importing core node modules
+	importing 3rd party modules
+	importing self created modules
+
+-file system 
+	require fs
+	fs.writeFileSync
+	fs.appendFileSync
+	fs.readFileSync
+	fs.mkdirSync() {recursive true create all the directoy}
+	fs.rmdirSync() {if emtyp andar waali phele delete)
+	fs.unlinkSync() //delete the file
+
+	Sync - Blocking operation 
+	
+	remove sync make async take callback
+	
+	eg.
+	 fs.readFile('notes.txt','utf-8',(error,data)=>{
+		if(error) conslog(error)
+		else conslog (data)	
+	} //async non blocking
+	
+	- two different file cannot access scope(variable) of each   	other using require due to scope. 
+	-can be done using export function
+
+to use common js module as default 'type': 'commonjs' and use es module in same file use extension as app.mjs.
+
+to use module js module as default 'type': 'module' and use common JS in same file use extension as app.cjs.
+
+- events 
+	-on (define first code)
+	-emit()
+	-once() //emit once if called twice wont run wont throw error
+	-removeListner('example') //after removing wont run that particular event name example again.
+	- listners() //tell how many people listening to event
+	-so many more
+
+	EVENTS CLASS 
+	add all events in class and using class syntax access events
+	 
+- http module
+	- request/response cycle
+	- HTTP METHODS
+	(GET,POST,PUT,PATCH,DELETE)
+	-https status code (eg 404)
+
+EXPLANATION 
+client send a request(HTTP MEHODS) can be GET POST DELETE
+
+ 	-GET when client want to get some data from server.
+		eg: see all the tweets, watch video, see comment
+	-POST when client want to send some data to server
+		eg: create a tweet, upload a video
+	-PATCH when client want to update some existing data 
+	-DELETE when client want to delete some data from server
+
+STATUS CODES are part of response 
+when we request in retrun we get response i.e. http status code these are just bunch of number (100-599)
+	404 - error finding not found
+	500 - internal server error
+	401 - unauthorized
+	200 - everythings ok
+	400 - bad request
+	201 - ok and created
+	301 - rediret
+
+	100-199 => Informational resp
+	200-299 => Successful res
+	300-399 => Redirection msg 
+	400-499 => client error res
+	500-599 => server error res
+
+http contain mainly
+	1. http version
+
+	2. URL - scheme -subdomain - naked domain - path - query parameter eg: https:// | www.| google.com | /about?| q=xyz&sort=des
+
+	3. an HTTP method
+
+	4. HTTP request headers (key value pair for every http method you provide extra data that is http header like TCP/IP we provide same way here but different things inside header) 
+	eg: Content Type : 'application/json'
+	    Authorization : TOKEN
+	others are authority method path scheme accept user-agent	
+	5. Optional HTTP Body 
+	-in GET its optional
+	-in POST its important like username password
+	
+learn about npm module manually importing it from npm web @use to write version to download
+eg 	validator, 
+	chalk (color)
+	nodemon -g(for globally install module in our pc)
+	yargs
+these are stored locally
+
+we can also use global module
+
+
+Modules in Node.js
+	-Used to split code into multiple files.
+	-Each file is a separate module.
+	-Use require() to import and module.exports to export.
+
+ES Module Syntax (Modern Way)
+	-Uses import and export keywords.
+	-Works when "type": "module" is added in package.json
+
+Using External Packages
+	-npm install chalk validator yargs
+
+Command Line Arguments
+	-Accessed using process.argv
+	-Returns an array of all arguments.
+
+General Learnings
+-Learned how to connect multiple files.
+-Understood module.exports and require.
+-Used npm packages (chalk, validator, yargs).
+-Understood command-line input handling.
+-Practiced ES module syntax.
+
+
+Section 4,5
+
+yargs Package
+	- Used for better command-line argument handling.
+	- getting user input from user
+	- argument parsing with yargs
+	- deep dive into yargs and its working and syntax
+storing data with JSON
+	-saving data in json format 
+	-accessing the data
+	- conversion of data in multiple form(binary json object)
+
+SECTION 6
+-Asynchronous Basics
+- CallStack, Callback Queue, and Event Loop
+- Making http request (weather stack)
+- npm module request
+- customizing http(language, temp,auto parse)
+- handling error in api,edge cases also
+-can be done using fetch/async in new ES6 module
+
+notes
+callback function cant return value as it will execute when main is empty
+
+
+SECTION 7 EXPRESS JS
+
+Express is a libary used for creating node server 
+
+-get = when someone tries to get something at a specific route?
+	We set that up using a get method on app
+	This lets us configure what the server should do
+	when someone tries to get the resource at a specific URL.
+	Maybe we should be sending back HTML,
+	or maybe we should be sending back JSON.
+	takes two argurment 'website location', (fucntion)
+
+funtion itself take two argument(request, response)
+
+- req = The first is an object containing information
+	about the incoming request to the server.
+	This is commonly called REQ, which is short for request.
+
+- res = So this contains a bunch of methods allowing us
+	to customize what we're gonna send back to the requester.
+	This is commonly called RES, which is short for response
+
+- send = this allows us to send something back to requester
+
+send() vs end()
+
+directly imported from http module .send is smarter version of end
+//prefer .send over .end
+
+SEND=>
+Serializes the data to a JSON string and sets the Content-Type to application/json.
+(Headers: It automatically sets useful headers like Content-Type and Content-Length.
+Use Case: This is the standard and recommended way to send most responses in an Express application.)
+
+END=>
+You would need to use res.writeHead() or res.setHeader() manually before calling res.end().
+It's rarely used directly in modern Express applications unless you are dealing with low-level streaming or you have a very specific need to bypass Express's helper methods.
