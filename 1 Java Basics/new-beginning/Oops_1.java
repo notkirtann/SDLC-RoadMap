@@ -1,7 +1,5 @@
-/**
- * Calce
- * 
- */
+import java.util.*;
+
 class Calce {
   public int add(int num1, int num2) {
     System.out.println("in add  class");
@@ -67,7 +65,7 @@ class LearningConstructor {
     this.teamName = teamName;
   }
 
-    public String getPlayerName() {
+  public String getPlayerName() {
     return playerName;
   }
 
@@ -81,9 +79,24 @@ class LearningConstructor {
 
 }
 
+class AnaymousObject {
+  public AnaymousObject() {
+    System.out.println();
+    System.out.println("Object created in heap memory");
+  }
+
+}
+
 // !main class for executing java class and methods
-public class Oops {
+public class Oops_1 {
   public static void main(String[] args) {
+
+    //Scanner to take input in code
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter your name: ");
+    String name = scanner.nextLine();
+    scanner.close();
+
     Calce add = new Calce(); // new objects.
     System.out.println(add.add(2, 3));
 
@@ -94,12 +107,15 @@ public class Oops {
 
     Encapsulation ex1 = new Encapsulation();
     ex1.setAge(7);
-    ex1.setName("Waymaker");
+    ex1.setName(name);
     int umar = ex1.getAge();
     String naam = ex1.getName();
     System.out.println("Age: " + umar + " Name : " + naam);
 
     LearningConstructor club = new LearningConstructor(" Sergio Ramos, ", 4, "Real Madrid");
-    System.out.print(club.getPlayerJersey()+club.getPlayerName()+club.getTeamName());
+    System.out.print(club.getPlayerJersey() + club.getPlayerName() + club.getTeamName());
+
+    new AnaymousObject(); // ananymous object. created object in heap but no one to refrence it.
+
   }
 }

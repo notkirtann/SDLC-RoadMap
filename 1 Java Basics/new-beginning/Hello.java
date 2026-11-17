@@ -32,7 +32,7 @@ public class Hello {
     String result = sahi==false ? "Aaa yeahh" : "oh no no no";
     System.out.println(result);
 
-    int jersey = 10;
+    final int jersey = 10; //cant be changed now
     switch (jersey) {
       case 7:
         System.out.println("Siuuuuuuuuuuuu GOAT");
