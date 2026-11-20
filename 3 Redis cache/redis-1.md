@@ -356,7 +356,7 @@ const worker = new Worker(
 ## 9. Important Redis Data Types
 
 | Data Type | Use Case |
-|---|---|
+|-----------|----------|
 | String | OTP, tokens, counters |
 | List | Simple queues |
 | Set | Unique users, unique values |
@@ -416,7 +416,7 @@ Redis is primarily an in-memory data store, but it can persist data to disk.
 ## 11. Redis Alternatives
 
 | Technology | Description |
-|---|---|
+|------------|-------------|
 | Valkey | Open-source Redis-compatible data store |
 | KeyDB | Multithreaded Redis-compatible database |
 | DragonflyDB | High-performance in-memory data store |
@@ -433,23 +433,6 @@ Use Redis when:
 
 Avoid adding Redis unnecessarily to small applications that do not have these requirements.
 
-## 13. Interview Questions
-
-1. What is Redis?
-2. Why is Redis faster than traditional databases for many workloads?
-3. What is TTL?
-4. What is the difference between Redis and MongoDB?
-5. What is cache invalidation?
-6. What is a cache hit and cache miss?
-7. How can Redis implement rate limiting?
-8. How is Redis used for session management?
-9. What are Redis persistence mechanisms?
-10. What is the difference between Redis Lists and Sorted Sets?
-11. What happens when Redis restarts?
-12. What is BullMQ and how does it use Redis?
-
 ---
-
-**Final Takeaway:**
 
 Redis is a high-performance in-memory data store that helps backend applications improve response times, reduce database load, manage temporary data, and process asynchronous jobs.
