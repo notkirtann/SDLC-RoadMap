@@ -420,6 +420,8 @@ Redis is primarily an in-memory data store, but it can persist data to disk.
 | Valkey | Open-source Redis-compatible data store |
 | KeyDB | Multithreaded Redis-compatible database |
 | DragonflyDB | High-performance in-memory data store |
+| Memcached | In-memory key-value store for caching |
+| Upstash | Managed Redis service with additional features |
 
 ## 12. When Should You Use Redis?
 
